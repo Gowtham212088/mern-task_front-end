@@ -4,36 +4,40 @@
   box-sizing: border-box;
 }
 
-.App{
+body{
+  height: 100vh;
+}
+
+.App {
   text-align: center;
 }
 
 /*?_____________________________________________________________________________SIGNUP ____________________________________________________  */
 
-.signUp-row{
+.signUp-row {
   background: white;
   border-radius: 30px;
   box-shadow: 12px 12px 22px;
 }
 
-.login img{
+.login img {
   border-top-left-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 
-img{
+img {
   object-fit: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
-.login h1{
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap");
+.login h1 {
   font-size: 4rem;
   font-weight: 700;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
-.inp{
+.inp {
   height: 50px;
   width: 70%;
   border: none;
@@ -42,57 +46,56 @@ img{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.btn1{
+.btn1 {
   height: 50px;
   width: 50%;
   border: none;
   outline: none;
   border-radius: 60px;
   font-weight: 600;
-  background: #F12315;
-  
+  background: #f12315;
 }
 
-.btn1:hover{
-background: #C80E02;
-transition: 0.5s;
-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+.btn1:hover {
+  background: #c80e02;
+  transition: 0.5s;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0; 
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
 }
 
- /*?______________________________________________________________________SIGNIN___________________________________________________  */
+/*?______________________________________________________________________SIGNIN___________________________________________________  */
 
- .signIn-box{
+.signIn-box {
   border-radius: 60px;
   background-color: rgba(239, 239, 239, 0.375);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
- }
+}
 
-.signIn-login img{
+.signIn-login img {
   border-top-left-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 
-img{
+img {
   object-fit: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
-.signIn-login h1{
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap");
+.signIn-login h1 {
   font-size: 4rem;
   font-weight: 700;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
-.signIn-inp{
+.signIn-inp {
   height: 50px;
   width: 70%;
   border: none;
@@ -101,59 +104,58 @@ img{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.signIn-btn1{
+.signIn-btn1 {
   height: 50px;
   width: 50%;
   border: none;
   outline: none;
   border-radius: 60px;
   font-weight: 600;
-  background: #F12315;
-  
+  background: #f12315;
 }
 
-.signIn-btn1:hover{
-background: #C80E02;
-transition: 0.5s;
-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+.signIn-btn1:hover {
+  background: #c80e02;
+  transition: 0.5s;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.forgot-pass{
- color: blue;
+.forgot-pass {
+  color: blue;
 }
 
-.forgot-pass:hover{
+.forgot-pass:hover {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
- }
+}
 
 /*? ____________________________________________________________________________Forgot Password____________________________________________ */
 
-.verification-box{
+.verification-box {
   border-radius: 60px;
   background-color: rgba(239, 239, 239, 0.375);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
- }
+}
 
-.verification-login img{
+.verification-login img {
   border-top-left-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 
-img{
+img {
   object-fit: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
-.verification-login h1,h2,h3,h4{
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap");
+.verification-login h1 {
   font-size: 2rem;
   font-weight: 700;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
-.verification-inp{
+.verification-inp {
   height: 50px;
   width: 70%;
   border: none;
@@ -162,59 +164,58 @@ img{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.verification-btn1{
+.verification-btn1 {
   height: 50px;
   width: 50%;
   border: none;
   outline: none;
   border-radius: 60px;
   font-weight: 600;
-  background: #F12315;
-  
+  background: #f12315;
 }
 
-.verification-btn1:hover{
-background: #C80E02;
-transition: 0.5s;
-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+.verification-btn1:hover {
+  background: #c80e02;
+  transition: 0.5s;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.verification-pass{
- color: blue;
+.verification-pass {
+  color: blue;
 }
 
-.verification-pass:hover{
+.verification-pass:hover {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
- }
+}
 
- /*?______________________________________________________________________Reset Password_________________________________________________  */
+/*?______________________________________________________________________Reset Password_________________________________________________  */
 
- .reset-box{
+.reset-box {
   border-radius: 60px;
   background-color: rgba(239, 239, 239, 0.375);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
- }
+}
 
-.reset-login img{
+.reset-login img {
   border-top-left-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 
-img{
+img {
   object-fit: cover;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
-.reset-login h1,h2,h3,h4{
+@import url("https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap");
+.reset-login h1 {
   font-size: 2rem;
   font-weight: 700;
-  font-family: 'Pacifico', cursive;
+  font-family: "Pacifico", cursive;
 }
 
-.reset-inp{
+.reset-inp {
   height: 50px;
   width: 70%;
   border: none;
@@ -223,29 +224,103 @@ img{
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.reset-btn1{
+.reset-btn1 {
   height: 50px;
   width: 50%;
   border: none;
   outline: none;
   border-radius: 60px;
   font-weight: 600;
-  background: #F12315;
-  
+  background: #f12315;
 }
 
-.reset-btn1:hover{
-background: #C80E02;
-transition: 0.5s;
-box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+.reset-btn1:hover {
+  background: #c80e02;
+  transition: 0.5s;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
-.reset-pass{
- color: blue;
+.reset-pass {
+  color: blue;
 }
 
-.reset-pass:hover{
+.reset-pass:hover {
   color: blue;
   cursor: pointer;
   text-decoration: underline;
- }
+}
+
+/*?__________________________________________________________________________________________Admin Pannel__________________________________________________________  */
+
+/** Admin Dashboard  */
+
+.dash-activity {
+  border-left: 10px solid #0d6efd;
+  background-color: rgb(255, 250, 180);
+  border-radius: 5px;
+  width: 350px;
+}
+
+.dash-activity1 {
+  border-left: 10px solid #198754;
+  background-color: rgb(255, 250, 180);
+  border-radius: 5px;
+  width: 350px;
+}
+
+.dash-activity2 {
+  border-left: 10px solid #0ccaf0;
+  background-color: rgb(255, 250, 180);
+  border-radius: 5px;
+  width: 350px;
+}
+
+.dash-activity3 {
+  border-left: 10px solid #ffc107;
+  background-color: rgb(255, 250, 180);
+  border-radius: 5px;
+  width: 350px;
+}
+
+.admin-container{
+  border: 2px solid red;
+  height: 100vh;
+}
+.admin-row{
+  border: 2px solid red;
+  border-bottom: none;
+  height: 45vh;
+  background-image: url("https://r4.wallpaperflare.com/wallpaper/800/831/598/digital-art-neon-mountains-lake-wallpaper-af8582fc5ee62cdbf52c68a2617124d4.jpg");
+background-size: cover;
+background-position: top;
+background-repeat: no-repeat;
+}
+.admin-col{
+  /* border: 2px solid red;
+  height: 25vh;
+ width: 25vh;
+ border-radius: 100%;
+ position: relative;
+ top: 75px; */
+ 
+}
+
+.admin-img{
+  width: 25vh;
+  height:25vh ;
+  border-radius: 100%;
+  position: relative;
+ top: 75px; 
+ border: 2px solid goldenrod;
+}
+
+.edit-button{
+  position: relative;
+  top: 150px;
+  right: 90px;
+}
+
+.edit-admin{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 45px;
+}

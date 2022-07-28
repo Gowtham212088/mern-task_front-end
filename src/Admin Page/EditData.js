@@ -1,16 +1,16 @@
 import React from "react";
-import fish from "../images/fish.jpg";
 
-const SignUp = () => {
-  return (
-    <section className="login mt-1 py-5">
-      <div className="container mt-5">
-        <div className="row  signUp-row g-0">
-          <div className="col-lg-7">
-            <img src={fish} alt="img-fluid" className="img-fluid h-100" />
-          </div>
-          <div className="col-lg-5">
-            <h1 className="py-2">Sign Up</h1>
+
+const EditData = ()=>{
+
+
+
+
+    return(
+        <div className="container-fluid mt-5">
+        <div className="row  justify-content-center  g-0">
+        <div className="col-lg-4 mt-5 edit-admin">
+            <h1 className="py-2">Edit Admin</h1>
 
             <form>
               <div className="form-row  py-3 pt-5">
@@ -66,15 +66,15 @@ const SignUp = () => {
 
               <div className="form-row  py-3">
                 <div className="offset-1 col-lg-10">
-                  <button className="btn1"> Sign Up </button>
+                  <button className="btn1"> Update Details </button>
                 </div>
               </div>
             </form>
           </div>
+          </div>
         </div>
-      </div>
-    </section>
-  );
-};
+    )
+}
 
-export default SignUp;
+
+export default EditData;
