@@ -8,7 +8,9 @@
   text-align: center;
 }
 
-.row{
+/*?_____________________________________________________________________________SIGNUP ____________________________________________________  */
+
+.signUp-row{
   background: white;
   border-radius: 30px;
   box-shadow: 12px 12px 22px;
@@ -18,6 +20,10 @@
   border-top-left-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
+}
+
+img{
+  object-fit: cover;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
@@ -61,11 +67,184 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0; 
 }
 
+ /*?______________________________________________________________________SIGNIN___________________________________________________  */
+
+ .signIn-box{
+  border-radius: 60px;
+  background-color: rgba(239, 239, 239, 0.375);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+ }
+
+.signIn-login img{
+  border-top-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+img{
+  object-fit: cover;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
+.signIn-login h1{
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Pacifico', cursive;
+}
+
+.signIn-inp{
+  height: 50px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.signIn-btn1{
+  height: 50px;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  font-weight: 600;
+  background: #F12315;
+  
+}
+
+.signIn-btn1:hover{
+background: #C80E02;
+transition: 0.5s;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
 .forgot-pass{
  color: blue;
 }
 
 .forgot-pass:hover{
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+ }
+
+/*? ____________________________________________________________________________Forgot Password____________________________________________ */
+
+.verification-box{
+  border-radius: 60px;
+  background-color: rgba(239, 239, 239, 0.375);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+ }
+
+.verification-login img{
+  border-top-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+img{
+  object-fit: cover;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
+.verification-login h1,h2,h3,h4{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Pacifico', cursive;
+}
+
+.verification-inp{
+  height: 50px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.verification-btn1{
+  height: 50px;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  font-weight: 600;
+  background: #F12315;
+  
+}
+
+.verification-btn1:hover{
+background: #C80E02;
+transition: 0.5s;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.verification-pass{
+ color: blue;
+}
+
+.verification-pass:hover{
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+ }
+
+ /*?______________________________________________________________________Reset Password_________________________________________________  */
+
+ .reset-box{
+  border-radius: 60px;
+  background-color: rgba(239, 239, 239, 0.375);
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+ }
+
+.reset-login img{
+  border-top-left-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+img{
+  object-fit: cover;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Anek+Bangla&family=Dancing+Script:wght@700&family=Grape+Nuts&family=Licorice&family=Open+Sans:wght@800&family=Pacifico&family=Poppins:wght@800&family=Roboto:wght@900&display=swap');
+.reset-login h1,h2,h3,h4{
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: 'Pacifico', cursive;
+}
+
+.reset-inp{
+  height: 50px;
+  width: 70%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.reset-btn1{
+  height: 50px;
+  width: 50%;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  font-weight: 600;
+  background: #F12315;
+  
+}
+
+.reset-btn1:hover{
+background: #C80E02;
+transition: 0.5s;
+box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.reset-pass{
+ color: blue;
+}
+
+.reset-pass:hover{
   color: blue;
   cursor: pointer;
   text-decoration: underline;
