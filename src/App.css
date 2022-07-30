@@ -133,7 +133,7 @@ img {
 /*? ____________________________________________________________________________Forgot Password____________________________________________ */
 
 .verification-box {
-  border-radius: 60px;
+  border-radius: 35px;
   background-color: rgba(239, 239, 239, 0.375);
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }

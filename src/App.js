@@ -6,7 +6,9 @@ import ForgotPassword from './Form pages/ForgotPassword';
 import ResetPassword from './Form pages/ResetPassword';
 import Admin from './Admin Page/Admin';
 import EditData from './Admin Page/EditData';
+import HomeNavbar from './Form pages/HomeNavbar';
 import {Switch,Route} from "react-router-dom";
+
 
 function App() {
   return (
@@ -34,13 +36,13 @@ function App() {
         <ForgotPassword />
         </Route>
 
-        <Route path="/reset">
+        <Route path="/reset-password/:id/:token">
         <Navbar />
         <ResetPassword />
         </Route>
 
         <Route path="/admin">
-        <Navbar />
+        <HomeNavbar/>
         <Admin />
         </Route>
 

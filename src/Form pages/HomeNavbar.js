@@ -7,7 +7,12 @@ import {Link} from "react-router-dom";
 
 
 
-const Navbar = ()=>{
+const HomeNavbar = ()=>{
+
+const handleClick = ()=>{
+    window.localStorage.clear()
+}
+
     return(
 <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
   <div className="container-fluid">
@@ -23,10 +28,21 @@ const Navbar = ()=>{
         <li className="nav-item">
         <Link to="/signUp" className="nav-link active" aria-current="page" href="#">Sign Up</Link> 
         </li>
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Account
+          </a>
+          <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a className="dropdown-item" href="#">Account Settings</a></li>
+            <li><a className="dropdown-item" href="#">Privacy Settings</a></li>
+            <li><hr className="dropdown-divider"/></li>
+            <li onClick={handleClick}><Link to="/signIn"  className="dropdown-item" >Logout</Link></li>
+          </ul>
+        </li>
       </ul>
       </div>
   </div>
 </nav>
     )
 }
-export default Navbar;
+export default HomeNavbar;

@@ -3,9 +3,6 @@ import React from "react";
 
 const EditData = ()=>{
 
-
-
-
     return(
         <div className="container-fluid mt-5">
         <div className="row  justify-content-center  g-0">
