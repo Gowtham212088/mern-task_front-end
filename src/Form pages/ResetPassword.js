@@ -11,8 +11,8 @@ const [newPassword,setNewPassword]= useState("");
 
 const handleSubmit = (event)=>{
 
+  event.preventDefault(event);
   event.preventDefault();
-
   var axios = require('axios');
 var data = JSON.stringify();
 
