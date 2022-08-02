@@ -1,6 +1,9 @@
 import React,{useState} from "react";
 import fish from "../images/fish.jpg";
 import { useHistory } from "react-router-dom";
+import { Api } from "../API";
+
+
 
 const SignUp = () => {
   
@@ -23,7 +26,7 @@ const handleSubmit = (event)=>{
     userDp:userDp
   } 
 
-fetch("http://localhost:5000/create/newUsers",{
+fetch(`${Api}/create/newUsers`,{
 method: "POST",
 body: JSON.stringify(signUpData),
 headers: { "content-type": "application/json" },

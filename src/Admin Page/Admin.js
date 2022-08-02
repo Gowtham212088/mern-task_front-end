@@ -1,15 +1,47 @@
-import React from "react";
+import React,{useEffect, useState} from "react";
 import Button from '@mui/material/Button';
 import BorderColorIcon from '@mui/icons-material/BorderColor';
 import { useHistory } from "react-router-dom";
+import axios from "axios";
+import {Api} from "../API"
 
 const Admin = ()=>{
 
-    const history = useHistory();
+  var token = localStorage.getItem("token")
+console.log(token);
 
+    const history = useHistory();
+    const [datas,setDatas]=useState("");
+    
+
+
+
+
+    //? AXIOS API CALL (GET Method) 
+
+    //  var axios = require('axios');
+     var data = '';
+
+var config = {
+  method: 'get',
+  url: `http://localhost:5000/verify/${token}`,
+  headers: { },
+  data : data
+};
+
+axios(config)
+.then(function (response) {
+  (JSON.stringify(setDatas(response.data)));
+})
+.catch(function (error) {
+  console.log(error);
+});
+
+useEffect(()=>setDatas(),[])
 
     return(
         <div className="container-fluid admin-container">
+          
               <div className="row border-2 admin-row justify-content-center align-items-end">
                 <div className="col-5 admin-col">
              <img src="https://avatars.githubusercontent.com/u/89139024?v=4" className="admin-img" alt="dp"/>
@@ -44,5 +76,6 @@ const Admin = ()=>{
         </div>
     )
 }
+
 
 export default Admin;

@@ -192,6 +192,10 @@ img {
 
 /*?______________________________________________________________________Reset Password_________________________________________________  */
 
+/* .img-sucess{
+  background-image: url("");
+} */
+
 .reset-box {
   border-radius: 60px;
   background-color: rgba(239, 239, 239, 0.375);

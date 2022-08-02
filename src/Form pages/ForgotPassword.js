@@ -1,33 +1,37 @@
 import React from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useParams,useHistory } from "react-router-dom";
+import { Api } from "../API";
 
 const ForgotPassword = () => {
+
+const history = useHistory();
+
+
   const [email, setEmail] = useState("");
   const [resp,setResp]= useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     var axios = require("axios");
     var data = JSON.stringify({ email: email });
-
     var config = {
       method: "post",
-      url: "http://localhost:5000/check/mailVerification",
+      url: `${Api}/check/mailVerification`,
       headers: {
         "Content-Type": "application/json",
       },
       data: data,
     };
-
-    axios(config)
+       axios(config)
       .then(function (response) {
-        console.log(JSON.stringify(setResp(response.data)));
+        setResp(JSON.stringify((response.data)));
       })
       .catch(function (error) {
         console.log(error);
       });
+      history.push("/signIn")
   };
 
   return (
