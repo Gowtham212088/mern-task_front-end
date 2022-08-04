@@ -1,60 +1,86 @@
-import React,{useEffect, useState} from "react";
-import Button from '@mui/material/Button';
-import BorderColorIcon from '@mui/icons-material/BorderColor';
+import React, { useEffect, useState } from "react";
+import Button from "@mui/material/Button";
+import BorderColorIcon from "@mui/icons-material/BorderColor";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import {Api} from "../API"
+import { Api } from "../API";
 
-const Admin = ()=>{
+const Admin = () => {
+  var token = localStorage.getItem("token");
+  
+  const history = useHistory();
+  const baseURL = "http://localhost:5000/getData";
+  const [datas, setDatas] = useState("");
+console.log(datas);
+ 
 
-  var token = localStorage.getItem("token")
-console.log(token);
+  useEffect(() => {
+    // axios.get(`${baseURL}`,{
+    //   headers:{
+    //     authorisation:token
+    //   }
+    // }).then((response) => {
+    //   setDatas(response.data);
+    //   console.log(datas);
 
-    const history = useHistory();
-    const [datas,setDatas]=useState("");
-    
+    // });
 
+    var axios = require("axios");
+    var data = "";
 
-
-
-    //? AXIOS API CALL (GET Method) 
-
-    //  var axios = require('axios');
-     var data = '';
-
-var config = {
-  method: 'get',
-  url: `http://localhost:5000/verify/${token}`,
-  headers: { },
-  data : data
-};
-
-axios(config)
-.then(function (response) {
-  (JSON.stringify(setDatas(response.data)));
-})
-.catch(function (error) {
-  console.log(error);
-});
-
-useEffect(()=>setDatas(),[])
-
-    return(
-        <div className="container-fluid admin-container">
+    var config = {
+      method: "get",
+      url: "http://localhost:5000/getData",
+      headers: {
+        "x-auth-token": localStorage.getItem("token")
           
-              <div className="row border-2 admin-row justify-content-center align-items-end">
-                <div className="col-5 admin-col">
-             <img src="https://avatars.githubusercontent.com/u/89139024?v=4" className="admin-img" alt="dp"/>
-               
-                </div>
-              </div>
+      },
+      data: data,
+    };
 
-              <div className="row mt-5">
-              <div col-4>  <h2 className="mt-5"> Gowtham KumarV <Button onClick={()=>history.push("/editAdmin")}> Edit <BorderColorIcon  /> </Button>  </h2><br/> <h2 className="text-muted"> Email </h2> <br/> <h2 className="text-muted"> contact </h2> </div>
-              </div>
+    axios(config)
+      .then(function (response) {
+        setDatas(response.data);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }, []);
 
-              <div className=" alert alert-primary">
-                <h2> Dummy datas </h2>
+  //? AXIOS API CALL (GET Method)
+
+  // useEffect(()=>setDatas(),[])
+
+  return (
+    <div className="container-fluid admin-container">
+      <div className="row border-2 admin-row justify-content-center align-items-end">
+        <div className="col-5 admin-col">
+          <img
+            src={datas.userDp}
+            className="admin-img"
+            alt="dp"
+          />
+        </div>
+      </div>
+
+      <div className="row mt-5">
+        <div col-4>
+          {" "}
+          <h2 className="mt-5">
+            {" "}
+           {datas.name}{" "}
+            <Button onClick={() => history.push("/editAdmin")}>
+              {" "}
+              Edit <BorderColorIcon/>{" "}
+            </Button>{" "}
+          </h2>
+          <br /> <h2 className="text-muted"> {datas.email} </h2> <br />{" "}
+          <h2 className="text-muted"> {datas.contact} </h2>{" "}
+        </div>
+      </div>
+
+      <div className=" alert alert-primary">
+        <h2> Dummy datas </h2>
         <div className="row d-flex h-25 justify-content-between flex-wrap flex-row ticket-box">
           <div className=" col-2   me-1 mx-2 py-5 mb-3    dash-activity">
             <h3> Front-End : 85 % </h3>
@@ -72,10 +98,9 @@ useEffect(()=>setDatas(),[])
             <h3> Elegablity : True </h3>
           </div>
         </div>
-        </div>
-        </div>
-    )
-}
-
+      </div>
+    </div>
+  );
+};
 
 export default Admin;

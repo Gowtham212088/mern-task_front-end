@@ -2,6 +2,7 @@ import React,{useState,useEffect} from "react";
 import computer from "../images/computer.jpg";
 import {Link} from "react-router-dom";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 import { Api } from "../API";
 
 
@@ -14,32 +15,39 @@ const [email,setEmail]=useState("");
 const [password,setPassword]= useState("");
 
 const [response,setResponse]= useState("");
-console.log(response);
+
 const handleSubmit = (e)=>{
-
-//  e.preventDefault()
-
-//   const signInData = {
-//     email:email,
+e.preventDefault()
+// var axios = require('axios');
+// var data = JSON.stringify({
+//   email:email,
 //   password:password
-// } 
+// });
 
-// fetch(`${Api}/user/signIn`,{
-// method: "POST",
-// body: JSON.stringify(signInData),
-// headers: { "content-type": "application/json" },
-// }).then((res)=>res.json()).then((res)=>setResponse(res)).then(()=>{
-//   window.localStorage.setItem('token', response.token);
+// var config = {
+//   method: 'post',
+//   url: 'http://localhost:5000/user/signIn',
+//   headers: { 
+//     'Content-Type': 'application/json'
+//   },
+//   data : data
+// };
+// axios.post('http://localhost:5000/user/signIn',{
+//  data
+// }).then((axiosResponse)=>{console.log(axiosResponse.data)
+//  window.localStorage.setItem('token',axiosResponse.data.token)
 // })
 
-// if(response.token == response.token){
-//           history.push("/admin")
-//   }
-e.preventDefault()
+
+//  if(response.token == response.token){
+//             history.push("/admin")
+//     }
+
+
 var axios = require('axios');
 var data = JSON.stringify({
-  email:email,
-  password:password
+  "email": email,
+  "password": password
 });
 
 var config = {
@@ -53,17 +61,16 @@ var config = {
 
 axios(config)
 .then(function (response) {
-  (JSON.stringify( setResponse(response.data)))
-}).then(()=>{
-  window.localStorage.setItem('token', response.token);
-}).catch(function (error) {
+  // console.log(JSON.stringify(response.data));
+
+  window.localStorage.setItem('token',response.data.token)
+  console.log(response.data);
+            history.push("/admin")
+
+})
+.catch(function (error) {
   console.log(error);
 });
-
- if(response.token == response.token){
-            history.push("/admin")
-    }
-
 
 }
 
