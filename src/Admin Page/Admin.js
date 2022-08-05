@@ -2,8 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import { useHistory } from "react-router-dom";
-import axios from "axios";
-import { Api } from "../API";
+import EditData from "./EditData";
 
 const Admin = () => {
   var token = localStorage.getItem("token");
@@ -11,6 +10,7 @@ const Admin = () => {
   const history = useHistory();
   const baseURL = "http://localhost:5000/getData";
   const [datas, setDatas] = useState("");
+
 console.log(datas);
  
 
@@ -53,6 +53,7 @@ console.log(datas);
 
   return (
     <div className="container-fluid admin-container">
+
       <div className="row border-2 admin-row justify-content-center align-items-end">
         <div className="col-5 admin-col">
           <img

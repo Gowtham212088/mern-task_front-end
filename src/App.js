@@ -47,7 +47,7 @@ function App() {
         </Route>
 
         <Route path="/editAdmin">
-        <Navbar />
+        <HomeNavbar />
         <EditData />
         </Route>
 
