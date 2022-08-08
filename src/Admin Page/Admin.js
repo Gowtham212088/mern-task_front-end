@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "@mui/material/Button";
-import BorderColorIcon from "@mui/icons-material/BorderColor";
+import CreateIcon from '@mui/icons-material/Create';
 import { useHistory } from "react-router-dom";
 import EditData from "./EditData";
 
@@ -53,7 +53,7 @@ const Admin = () => {
             {datas.name}{" "}
             <Button onClick={() => history.push("/editAdmin")}>
               {" "}
-              Edit <BorderColorIcon />{" "}
+               <CreateIcon />{" "}
             </Button>{" "}
           </h2>
           <br /> <h2 className="text-muted"> {datas.email} </h2> <br />{" "}

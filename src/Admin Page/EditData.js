@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useHistory } from "react-router-dom";
 
 const EditData = ()=>{
 
@@ -13,7 +13,7 @@ const EditData = ()=>{
 
   const [image,setImage]=useState("");
 
- 
+ const history = useHistory();
 
 const handleSubmit=(event)=>{
 
@@ -46,6 +46,9 @@ const handleSubmit=(event)=>{
     console.log(error);
   });
 
+  window.localStorage.clear()
+
+  history.push("/signIn")
 }
 
 

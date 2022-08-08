@@ -7,7 +7,7 @@ function Test (){
   const [products, setProducts] = useState([]);
   const getProducts = async () => {
     try {
-      const { data } = await axios.get("");
+      const { data } = await axios.get("http://localhost:5000/getData");
       setProducts(data);
 
     } catch (error) {
@@ -23,10 +23,8 @@ function Test (){
 {products.map((element) => (
           <ProductTemplate
             _id={element._id}
-            key={element.id}
-            img={element.img}
+            img={element.userDp}
             name={element.name}
-            price={element.price}
           />
         ))}
         </div>
@@ -46,6 +44,7 @@ function ProductTemplate({ name, img, _id }) {
             alt="..."
             
           />
+          <h1> {_id} </h1>
           <h6 className="fw-bold">{name}</h6>
         </div>
       </div>

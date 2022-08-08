@@ -142,13 +142,15 @@ axios(config)
 
               <div className="form-row py-3">
                 <div className="offset-1 col-lg-10">
-                <input type="file" onChange={onChange} />
+                <span style={{color:"red"}}> This feature is in Under construction </span>
+                <input style={{border:"1px solid red"}} type="file" onChange={onChange} />
                 {/* <textarea rows="50" cols="50" value={this.base64code}></textarea> */}
                 </div>
               </div>
 
               <div className="form-row py-3">
                 <div className="offset-1 col-lg-10">
+                  <span style={{color:"blue"}}> Copy image address and paste here  </span>
                   <input
                     type="url"
                     className="inp px-3"

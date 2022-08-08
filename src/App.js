@@ -8,12 +8,12 @@ import Admin from './Admin Page/Admin';
 import EditData from './Admin Page/EditData';
 import HomeNavbar from './Form pages/HomeNavbar';
 import {Switch,Route} from "react-router-dom";
-
+import Test from './Form pages/Test';
 
 function App() {
   return (
     <div className="App">
-      
+      {/* <Test/> */}
       <Switch>
 
       <Route exact path="/">
