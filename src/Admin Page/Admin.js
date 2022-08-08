@@ -6,25 +6,16 @@ import EditData from "./EditData";
 
 const Admin = () => {
   var token = localStorage.getItem("token");
-  
+
   const history = useHistory();
+
   const baseURL = "http://localhost:5000/getData";
+
   const [datas, setDatas] = useState("");
 
-console.log(datas);
- 
+  console.log(datas);
 
   useEffect(() => {
-    // axios.get(`${baseURL}`,{
-    //   headers:{
-    //     authorisation:token
-    //   }
-    // }).then((response) => {
-    //   setDatas(response.data);
-    //   console.log(datas);
-
-    // });
-
     var axios = require("axios");
     var data = "";
 
@@ -32,8 +23,7 @@ console.log(datas);
       method: "get",
       url: "http://localhost:5000/getData",
       headers: {
-        "x-auth-token": localStorage.getItem("token")
-          
+        "x-auth-token": localStorage.getItem("token"),
       },
       data: data,
     };
@@ -47,20 +37,11 @@ console.log(datas);
       });
   }, []);
 
-  //? AXIOS API CALL (GET Method)
-
-  // useEffect(()=>setDatas(),[])
-
   return (
     <div className="container-fluid admin-container">
-
       <div className="row border-2 admin-row justify-content-center align-items-end">
         <div className="col-5 admin-col">
-          <img
-            src={datas.userDp}
-            className="admin-img"
-            alt="dp"
-          />
+          <img src={datas.userDp} className="admin-img" alt="dp" />
         </div>
       </div>
 
@@ -69,10 +50,10 @@ console.log(datas);
           {" "}
           <h2 className="mt-5">
             {" "}
-           {datas.name}{" "}
+            {datas.name}{" "}
             <Button onClick={() => history.push("/editAdmin")}>
               {" "}
-              Edit <BorderColorIcon/>{" "}
+              Edit <BorderColorIcon />{" "}
             </Button>{" "}
           </h2>
           <br /> <h2 className="text-muted"> {datas.email} </h2> <br />{" "}
