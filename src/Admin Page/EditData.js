@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { Api } from "../API";
 
 const EditData = ()=>{
 
@@ -30,7 +31,7 @@ const handleSubmit=(event)=>{
   
   var config = {
     method: 'put',
-    url: 'http://localhost:5000/change/user',
+    url: `${Api}/change/user`,
     headers: { 
         "x-auth-token": localStorage.getItem("token"),
       'Content-Type': 'application/json'

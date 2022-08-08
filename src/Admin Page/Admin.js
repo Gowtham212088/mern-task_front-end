@@ -3,13 +3,14 @@ import Button from "@mui/material/Button";
 import CreateIcon from '@mui/icons-material/Create';
 import { useHistory } from "react-router-dom";
 import EditData from "./EditData";
+import { Api } from "../API";
 
 const Admin = () => {
   var token = localStorage.getItem("token");
 
   const history = useHistory();
 
-  const baseURL = "http://localhost:5000/getData";
+  const baseURL = `${Api}/getData`;
 
   const [datas, setDatas] = useState("");
 

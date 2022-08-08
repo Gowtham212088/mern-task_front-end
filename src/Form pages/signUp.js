@@ -67,7 +67,7 @@ var data = {
 console.log(data);
 var config = {
   method: 'post',
-  url: 'http://localhost:5000/create/newUsers',
+  url: `${Api}/create/newUsers`,
   headers: { 
     'Content-Type': 'application/json'
   },
