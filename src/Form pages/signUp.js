@@ -1,8 +1,10 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import fish from "../images/fish.jpg";
 import { useHistory } from "react-router-dom";
 import { Api } from "../API";
-
+import TextField from '@mui/material/TextField';
+import MenuItem from '@mui/material/MenuItem';
+import axios from "axios";
 
 const SignUp = () => {
 
@@ -13,6 +15,94 @@ const SignUp = () => {
   const [password,setPassword]=useState("");
   const [userDp,setUserDp]=useState("");
   const [response,setResponse]=useState("");
+
+  // const city = [
+  //   {
+  //     value: 'madurai',
+  //     label: 'madurai',
+  //   },
+  //   {
+  //     value: 'chennai',
+  //     label: 'chennai',
+  //   },
+  //   {
+  //     value: 'banglore',
+  //     label: 'banglore',
+  //   },
+  //   {
+  //     value: 'hydrabad',
+  //     label: 'hydrabad',
+  //   },
+  // ];
+
+  const [res,setRes]= useState([])
+
+
+
+  const fill = res.map((elem)=>{
+    return elem.altSpellings
+ })
+ const round = fill.flat()
+ 
+ const final = round.map((elem)=>{
+    const datas = {
+       value:elem,
+       label:elem
+    }
+    return datas
+ })
+ console.log(final);
+
+useEffect(() => {
+  var axios = require("axios");
+  var data = "";
+
+  var config = {
+    method: "get",
+    url: "https://restcountries.com/v3.1/name/united",
+    headers: {
+      "x-auth-token": localStorage.getItem("token"),
+    },
+    data: data,
+  };
+
+  axios(config)
+    .then(function (response) {
+      setRes(response.data)
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+}, []);
+
+
+
+
+
+  const city = [
+    {
+      value: 'madurai',
+      label: 'madurai',
+    },
+    {
+      value: 'chennai',
+      label: 'chennai',
+    },
+    {
+      value: 'banglore',
+      label: 'banglore',
+    },
+    {
+      value: 'hydrabad',
+      label: 'hydrabad',
+    },
+  ];
+
+  const [country, setCountry] = React.useState('');
+console.log(country);
+  const handleChange = (event) => {
+    setCountry(event.target.value);
+  };
 
   //? Base 64 Code for image uploading.
   let base64code = ""
@@ -46,7 +136,8 @@ const handleSubmit = (event)=>{
 //     email:email,
 //     contact:contact,
 //     password:password,
-//     userDp:userDp
+//     userDp:userDp,
+//     country:country
 //   } 
 
 // fetch(`${Api}/create/newUsers`,{
@@ -62,9 +153,10 @@ var data = {
   "email": email,
   "contact": contact,
   "password": password,
-  "userDp": userDp
+  "userDp": userDp,
+  "country":country
 };
-console.log(data);
+console.log(response);
 var config = {
   method: 'post',
   url: `${Api}/create/newUsers`,
@@ -140,6 +232,28 @@ axios(config)
                 </div>
               </div>
 
+              
+              <div className="form-row py-3">
+                <div className="offset-1 col-lg-10">
+                <div>
+        <TextField
+          id="outlined-select-currency"
+          select
+          label="Select"
+          value={country}
+          onChange={handleChange}
+          helperText="Please select your currency"
+        >
+          {final.map((option,key) => (
+            <MenuItem style={{color:"black"}} key={key} value={option.value}>
+              {option.value}
+            </MenuItem>
+          ))}
+        </TextField>
+                </div>
+              </div>
+              </div>
+
               <div className="form-row py-3">
                 <div className="offset-1 col-lg-10">
                 <span style={{color:"red"}}> This feature is in Under construction </span>
@@ -147,6 +261,8 @@ axios(config)
                 {/* <textarea rows="50" cols="50" value={this.base64code}></textarea> */}
                 </div>
               </div>
+
+              
 
               <div className="form-row py-3">
                 <div className="offset-1 col-lg-10">

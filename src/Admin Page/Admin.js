@@ -14,7 +14,7 @@ const Admin = () => {
 
   const [datas, setDatas] = useState("");
 
-  console.log(datas);
+  // console.log(datas);
 
   useEffect(() => {
     var axios = require("axios");
@@ -56,6 +56,7 @@ const Admin = () => {
               {" "}
                <CreateIcon />{" "}
             </Button>{" "}
+            <h3> Country: {} </h3>
           </h2>
           <br /> <h2 className="text-muted"> {datas.email} </h2> <br />{" "}
           <h2 className="text-muted"> {datas.contact} </h2>{" "}
